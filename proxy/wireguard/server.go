@@ -321,6 +321,7 @@ func (s *Server) Start() error {
 	}
 	s.dev = dev
 	CreateForwarder(s.stack, s.HandleConnection)
+	CreateICMPEchoResponder(s.stack)
 	return nil
 }
 
